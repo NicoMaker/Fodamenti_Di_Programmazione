@@ -1,0 +1,28 @@
+body {
+  font-size: Arial, san-serif;
+  margin: 20px;
+  line-height: 1, 6;
+}
+
+header,
+footer {
+  background-color: red;
+  padding: 12px;
+  text-align: center;
+}
+
+nav {
+  margin: 2px 0;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: overline;
+}
+
+footer {
+  padding-bottom: 20px;
+}
