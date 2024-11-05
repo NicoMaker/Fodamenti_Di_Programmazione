@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>modulo di iscrizione evento</title>
+  </head>
+  <body>
+    <h1>Modulo di iscrzione evento</h1>
+
+    <form action="es1.html" method="POST">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+      <br />
+      <br />
+
+      <label for="cognome">Cognome:</label>
+      <input type="text" id="cognome" name="Cognome" required />
+      <br />
+      <br />
+
+      <label for="email">E-mail:</label>
+      <input type="text" id="emil" name="email" />
+      <br />
+      <br />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        minlength="8"
+      />
+
+      <br />
+      <br />
+
+      <label for="conferma password"> conferma password:</label>
+      <input
+        type="password"
+        id="conferma password"
+        name="conferma password"
+        required
+        minlength="8"
+      />
+
+      <br />
+      <br />
+
+      <label>tipi di prenotazione:</label><br /><br />
+      <input
+        type="radio"
+        id="In presenza"
+        name="in presenza"
+        value="in presenza"
+      />
+      <label for="in presenza">in presenza</label>
+      <input type="radio" id="online" name="online" value="online" />
+      <label for="online">online</label>
+      <br />
+      <br />
+
+      <input
+        type="checkbox"
+        id="Accetta"
+        name="condizione"
+        value="Accetta i temini e condizioni"
+      />
+      <label for="Accetta i temini e condizioni"
+        >Accetta i termini e condizioni</label
+      ><br /><br />
+
+      <input type="submit" value="Invia" />
+    </form>
+  </body>
+</html>
