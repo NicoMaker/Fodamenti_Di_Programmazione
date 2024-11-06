@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<title>Modulo di Contatto</title>
+	</head>
+	<body>
+		
+		<h1>Modulo di Contatto</h1>
+		<form action="risultato.html" method="POST">
+			
+			<!-- Campo di testo -->
+			<label for="nome">Nome:</label>
+			<input type="text" id="nome" name="nome"><br><br>
+			
+			<!-- Checkbox -->
+			<label>Seleziona i tuoi interessi:</label><br>
+			<input type="checkbox" id="sport" name="interessi" value="Sport">
+			<label for="sport">Sport</label><br>
+			<input type="checkbox" id="musica" name="interessi" value="Musica">
+			<label for="musica">Musica</label><br><br>
+			
+			<!-- Radio button -->
+			<label>Genere:</label><br>
+			<input type="radio" id="maschio" name="genere" value="Maschio">
+			<label for="maschio">Maschio</label><br>
+			<input type="radio" id="femmina" name="genere" value="Femmina">
+			<label for="femmina">Femmina</label><br><br>
+			
+			<!-- Menu a tendina -->
+			<label for="nazione">Nazionalità:</label>
+			<select id="nazione" name="nazione">
+				<option value="italiana">Italiana</option>
+				<option value="francese">Francese</option>
+				<option value="spagnola">Spagnola</option>
+			</select><br><br>
+			
+			<!-- Bottoni -->
+			<input type="submit" value="Invia">
+			<input type="reset" value="Resetta">
+			
+		</form>
+		
+	</body>
+</html>
+

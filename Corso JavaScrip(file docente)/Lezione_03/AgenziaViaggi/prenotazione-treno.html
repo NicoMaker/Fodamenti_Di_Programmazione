@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Prenotazione Treno</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<h1>Prenotazione Treno</h1>
+			<a href="index.html" class="back-link">Torna alla pagina principale</a>
+		</header>
+		<main>
+			<form action="#" method="post">
+				<label for="name">Nome Completo:</label>
+				<input type="text" id="name" name="name" required>
+				
+				<label for="departure">Data di Partenza:</label>
+				<input type="date" id="departure" name="departure" required>
+				
+				<label for="train-type">Tipo di Treno:</label>
+				<select id="train-type" name="train-type">
+					<option value="intercity">Intercity</option>
+					<option value="frecciarossa">Frecciarossa</option>
+					<option value="regional">Regionale</option>
+				</select>
+				
+				<button type="submit">Invia Prenotazione</button>
+			</form>
+		</main>
+	</body>
+</html>

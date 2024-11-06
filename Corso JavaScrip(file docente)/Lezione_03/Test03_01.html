@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<title>Profilo dell'Evento</title>
+	</head>
+	<body>
+		
+		<!-- Titolo principale della pagina -->
+		<h1>Conferenza Internazionale di Tecnologia 2024</h1>
+		
+		<!-- Paragrafo introduttivo -->
+		<p>Benvenuti alla pagina ufficiale della Conferenza Internazionale di Tecnologia 2024. <br>Questo evento riunisce esperti da tutto il mondo per discutere le ultime innovazioni e tendenze nel campo della tecnologia.</p>
+		
+		<!-- Lista non ordinata dei punti salienti dell'evento -->
+		<h2>Punti Salienti dell'Evento</h2>
+		<ul>
+			<li>Presentazioni di leader del settore tecnologico</li>
+			<li>Workshop pratici su nuove tecnologie</li>
+			<li>Opportunità di networking con professionisti</li>
+			<li>Esposizione di start-up tecnologiche</li>
+			<li>Discussioni sui trend emergenti</li>
+		</ul>
+		
+		<!-- Tabella del programma dell'evento -->
+		<h2>Programma dell'Evento</h2>
+		<table border="1" cellpadding="10" cellspacing="0">
+			<tr>
+				<th>Orario</th>
+				<th>Attività</th>
+				<th>Relatore</th>
+			</tr>
+			<tr>
+				<td>09:00 - 10:00</td>
+				<td>Registrazione e Welcome Coffee</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>10:00 - 11:30</td>
+				<td>Keynote: Il Futuro della Tecnologia</td>
+				<td>Dr. Mario Rossi</td>
+			</tr>
+			<tr>
+				<td>11:30 - 13:00</td>
+				<td>Workshop: Introduzione alla Blockchain</td>
+				<td>Prof. Laura Verdi</td>
+			</tr>
+			<tr>
+				<td>13:00 - 14:00</td>
+				<td>Pranzo</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>14:00 - 15:30</td>
+				<td>Pannello di Discussione: Intelligenza Artificiale</td>
+				<td>Vari Esperti</td>
+			</tr>
+		</table>
+		
+		<!-- Collegamenti ipertestuali esterni -->
+		<p>Per ulteriori informazioni, visita la <a href="https://www.techevent2023.com" target="_blank">pagina ufficiale dell'evento</a>. <br>
+		Se desideri partecipare, effettua la tua <a href="#registrazione">registrazione</a> qui sotto.</p>
+		
+		<!-- Modulo di registrazione -->
+		<h2 id="registrazione">Modulo di Registrazione</h2>
+		<form action="submit_registration.html" method="POST">
+			<label for="nome">Nome:</label>
+			<input type="text" id="nome" name="nome" required><br><br>
+			
+			<label for="cognome">Cognome:</label>
+			<input type="text" id="cognome" name="cognome" required><br><br>
+			
+			<label for="email">E-mail:</label>
+			<input type="email" id="email" name="email" required><br><br>
+			
+			<label for="partecipazione">Modalità di Partecipazione:</label><br>
+			<input type="radio" id="in_presenza" name="partecipazione" value="in_presenza" required>
+			<label for="in_presenza">In Presenza</label>
+			<input type="radio" id="online" name="partecipazione" value="online">
+			<label for="online">Online</label><br><br>
+			
+			<label for="commenti">Commenti o Domande:</label><br>
+			<textarea id="commenti" name="commenti" rows="4" cols="50"></textarea><br><br>
+			
+			<input type="submit" value="Invia Registrazione">
+		</form>
+		
+	</body>
+</html>
