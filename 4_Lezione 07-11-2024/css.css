@@ -1,0 +1,21 @@
+.intestazione {
+  color: darkblue;
+  font-size: 24px;
+}
+
+#testo {
+  font-size: 16px;
+  color: grey;
+}
+
+.sezione {
+  background-color: lightskyblue;
+  padding: 2em;
+  width: 80%;
+}
+
+.sezione,
+p {
+  color: lightgrey;
+  font-size: 1.5em;
+}
