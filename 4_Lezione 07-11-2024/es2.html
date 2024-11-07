@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>clicca il bottone per cambiare il testo</h1>
+
+    <p id="text">Questo è il testo da cambiare</p>
+
+    <button onclick="changetext()">Clicca qui</button>
+
+    <script>
+      const changetext = () =>
+        (document.getElementById("text").innerHTML = "Hai cambiato il testo");
+
+      function changetext2() {
+        document.getElementById("text").innerHTML = "Hai cambiato il testo";
+      }
+    </script>
+  </body>
+</html>

@@ -116,3 +116,17 @@ p {
   font-size: 1.5em;
 }
 ```
+
+# JS 
+
+```JS
+
+// funzione con arrow funcrion
+const changetext = () =>
+  (document.getElementById("text").innerHTML = "Hai cambiato il testo"); // cambia il testo nella parte text con il nome nuovo
+
+// funzione normale
+function changetext2() {
+  document.getElementById("text").innerHTML = "Hai cambiato il testo"; // cambia il testo nella parte text con il nome nuovo
+}
+```
