@@ -160,5 +160,15 @@ let oggetto = {
 // operatore di confronto 
 a === b ; // però dello stesso tipo
 
+// And 
+a && b;
+
+// OR
+
+a || b; 
+
+// not
+
+A != b;
 
 ```
