@@ -129,4 +129,36 @@ const changetext = () =>
 function changetext2() {
   document.getElementById("text").innerHTML = "Hai cambiato il testo"; // cambia il testo nella parte text con il nome nuovo
 }
+
+// Variabili 
+
+const x; // il valore non cambia devi essere un valori fisso
+let y; // il valore può cambiare non riasegnare
+var z;  // valore può essere riasegnato (non da usare )
+
+// stringa
+let stringa = `stringa`;
+let stringa = "stringa";
+
+// bool 
+let booleano = true;
+let bolleano = false;
+
+// array -> contenitore di dati
+let array = []; // all'interno tutti i dati con dentro array
+
+let arraynumeri = [1,2,3,4,5];
+let arraystringa = ["primo","Secondo","terzo"];
+
+// oggetto
+let oggetto = {
+  nome : "nome",
+  cognome : "cognome",
+  eta : 15
+}
+
+// operatore di confronto 
+a === b ; // però dello stesso tipo
+
+
 ```
