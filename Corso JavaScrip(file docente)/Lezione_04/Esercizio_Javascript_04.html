@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Gestione Contatti</title>
+		<style>
+			body { font-family: Arial, sans-serif; margin: 20px; }
+			form { margin-bottom: 20px; }
+			input, button { padding: 8px; margin: 5px; }
+			table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+			th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+			th { background-color: #f4f4f4; }
+		</style>
+	</head>
+	<body>
+		<h2>Gestione Contatti</h2>
+		
+		<!-- Form di input per inserire i dati -->
+		<form id="contactForm">
+			<input type="text" id="name" placeholder="Nome" required>
+			<input type="text" id="surname" placeholder="Cognome" required>
+			<input type="email" id="email" placeholder="Email" required>
+			<input type="text" id="phone" placeholder="Telefono" required>
+			<button type="button" onclick="addContact()">Aggiungi Contatto</button>
+		</form>
+		
+		<!-- Tabella per visualizzare i dati -->
+		<table>
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Cognome</th>
+					<th>Email</th>
+					<th>Telefono</th>
+					<th>Azioni</th>
+				</tr>
+			</thead>
+			<tbody id="contactTable">
+				<!-- Le righe della tabella saranno generate dinamicamente -->
+			</tbody>
+		</table>
+		
+		<script>
+			// Array per memorizzare i dati dei contatti
+			let contacts = [];
+			
+			// Funzione per aggiungere un nuovo contatto
+			function addContact() {
+				// Ottiene i valori dai campi di input
+				let name = document.getElementById("name").value;
+				let surname = document.getElementById("surname").value;
+				let email = document.getElementById("email").value;
+				let phone = document.getElementById("phone").value;
+				
+				// Crea un oggetto per il nuovo contatto e lo aggiunge alla matrice
+				let contact = { name, surname, email, phone };
+				contacts.push(contact);
+				
+				// Aggiorna la tabella e resetta i campi
+				updateTable();
+				document.getElementById("contactForm").reset();
+			}
+			
+			// Funzione per aggiornare la tabella con i dati dell'array
+			function updateTable() {
+				let table = document.getElementById("contactTable");
+				table.innerHTML = "";  // Pulisce la tabella
+				
+				// Genera una nuova riga per ogni contatto nella matrice
+				contacts.forEach((contact, index) => {
+					let row = table.insertRow();
+					row.insertCell(0).innerText = contact.name;
+					row.insertCell(1).innerText = contact.surname;
+					row.insertCell(2).innerText = contact.email;
+					row.insertCell(3).innerText = contact.phone;
+					
+					// Crea i pulsanti di modifica ed elimina
+					let actionsCell = row.insertCell(4);
+					actionsCell.innerHTML = `
+				<button onclick="editContact(${index})">Modifica</button>
+				<button onclick="deleteContact(${index})">Elimina</button>
+                `;
+				});
+				}
+				
+				// Funzione per eliminare un contatto
+				function deleteContact(index) {
+				// Rimuove il contatto dall'array usando l'indice
+				contacts.splice(index, 1);
+				
+				// Aggiorna la tabella
+				updateTable();
+				}
+				
+				// Funzione per modificare un contatto
+				function editContact(index) {
+				// Ottiene i dati del contatto selezionato
+				let contact = contacts[index];
+				
+				// Pre-popola i campi di input con i dati esistenti
+				document.getElementById("name").value = contact.name;
+				document.getElementById("surname").value = contact.surname;
+				document.getElementById("email").value = contact.email;
+				document.getElementById("phone").value = contact.phone;
+				
+				// Aggiorna il pulsante per confermare le modifiche
+				document.getElementById("contactForm").onsubmit = function(event) {
+                event.preventDefault();  // Evita il comportamento predefinito
+                updateContact(index);
+				};
+				}
+				
+				// Funzione per confermare le modifiche di un contatto
+				function updateContact(index) {
+				// Aggiorna i dati del contatto con i valori nei campi di input
+				contacts[index] = {
+                name: document.getElementById("name").value,
+                surname: document.getElementById("surname").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value
+				};
+				
+				// Resetta il form e aggiorna la tabella
+				document.getElementById("contactForm").reset();
+				document.getElementById("contactForm").onsubmit = function(event) {
+                event.preventDefault();
+                addContact();
+				};
+				updateTable();
+				}
+			</script>
+		</body>
+	</html>

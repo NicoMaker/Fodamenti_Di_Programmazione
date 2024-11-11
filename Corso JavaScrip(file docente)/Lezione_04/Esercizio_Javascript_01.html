@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Checklist Spesa</title>
+		<style>
+			body { font-family: Arial, sans-serif; margin: 20px; }
+			.item { margin: 10px 0; }
+			button { margin-top: 10px; padding: 8px 12px; font-size: 16px; }
+		</style>
+	</head>
+	<body>
+		<h2>Checklist Spesa</h2>
+		<div id="checklist">
+			<div class="item"><input type="checkbox" class="grocery-item"> Latte</div>
+			<div class="item"><input type="checkbox" class="grocery-item"> Pane</div>
+			<div class="item"><input type="checkbox" class="grocery-item"> Uova</div>
+			<div class="item"><input type="checkbox" class="grocery-item"> Frutta</div>
+			<div class="item"><input type="checkbox" class="grocery-item"> Verdura</div>
+		</div>
+		
+		<button onclick="selectAll()">Seleziona Tutti</button>
+		<button onclick="deselectAll()">Deseleziona Tutti</button>
+		
+		<script>
+			function selectAll() {
+				// Seleziona tutti gli elementi della checklist
+				let items = document.querySelectorAll(".grocery-item");
+				items.forEach(item => item.checked = true);
+			}
+			
+			function deselectAll() {
+				// Deseleziona tutti gli elementi della checklist
+				let items = document.querySelectorAll(".grocery-item");
+				items.forEach(item => item.checked = false);
+			}
+		</script>
+	</body>
+</html>

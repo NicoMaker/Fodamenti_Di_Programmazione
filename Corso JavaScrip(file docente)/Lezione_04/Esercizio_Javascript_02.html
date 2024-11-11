@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Calcolatrice Budget Mensile</title>
+		<style>
+			body { font-family: Arial, sans-serif; margin: 20px; }
+			form { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+			label, input { display: block; width: 100%; margin-bottom: 10px; }
+			button { margin-top: 10px; padding: 8px 12px; font-size: 16px; }
+		</style>
+	</head>
+	<body>
+		<h2>Calcolatrice Budget Mensile</h2>
+		<form id="budgetForm">
+			<label for="income">Entrate (€):</label>
+			<input type="number" id="income" required>
+			
+			<label for="expenses">Spese (€):</label>
+			<input type="number" id="expenses" required>
+			
+			<button type="button" onclick="calculateBudget()">Calcola</button>
+			<button type="button" onclick="resetForm()">Azzera</button>
+			<button type="button" onclick="clearBudget()">Cancella</button>
+		</form>
+		
+		<script>
+			function calculateBudget() {
+				let income = parseFloat(document.getElementById("income").value);
+				let expenses = parseFloat(document.getElementById("expenses").value);
+				
+				if (!isNaN(income) && !isNaN(expenses)) {
+					let balance = income - expenses;
+					alert("Il bilancio mensile è: €" + balance.toFixed(2));
+					} else {
+					alert("Inserisci valori validi per entrate e spese.");
+				}
+			}
+			
+			function resetForm() {
+				document.getElementById("budgetForm").reset();
+			}
+			
+			function clearBudget() {
+				if (confirm("Sei sicuro di voler cancellare il budget?")) {
+					resetForm();
+					alert("Dati del budget cancellati.");
+				}
+			}
+		</script>
+	</body>
+</html>
