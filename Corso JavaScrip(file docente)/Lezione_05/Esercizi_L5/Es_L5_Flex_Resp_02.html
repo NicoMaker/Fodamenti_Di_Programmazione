@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Responsive Design</title>
+		<style>
+			.container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+			}
+			.item {
+            flex: 1;
+            padding: 20px;
+            background-color: lightcoral;
+            margin: 10px;
+			}
+			
+			/* Media query per schermi di dimensioni più piccole */
+			@media (max-width: 768px) {
+            .container {
+			flex-direction: column;
+            }
+            .item {
+			margin: 5px 0;
+            }
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="item">Item 1</div>
+			<div class="item">Item 2</div>
+			<div class="item">Item 3</div>
+		</div>
+	</body>
+</html>

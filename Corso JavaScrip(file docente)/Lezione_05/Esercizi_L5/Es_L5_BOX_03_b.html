@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<title>Layout con Flexbox</title>
+		<style>
+			.container {
+			display: flex;
+			justify-content: space-around; /* Distribuisce gli elementi */
+			align-items: center;           /* Allinea verticalmente */
+			height: 200px;
+			background-color: #eee;
+			}
+			.box {
+			width: 100px;
+			height: 100px;
+			background-color: #ccc;
+			text-align: center;
+			line-height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="container">
+			<div class="box">1</div>
+			<div class="box">2</div>
+			<div class="box">3</div>
+		</div>
+		
+	</body>
+</html>

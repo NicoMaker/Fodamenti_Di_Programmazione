@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Selettori Figlio Diretto</title>
+		<style>
+			/* Selettore figlio diretto per il primo div */
+			div > p {
+            color: brown;
+			}
+			
+			/* Escludiamo i paragrafi contenuti nel secondo div */
+			.secondo-div > p {
+            color: black; /* Ripristina il colore di default o specifica un colore diverso */
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>Questo è un figlio diretto del div, sarà marrone.</p>
+			<div class="secondo-div">
+				<p>Questo è un discendente, non un figlio diretto, quindi non sarà marrone.</p>
+			</div>
+		</div>
+	</body>
+</html>
