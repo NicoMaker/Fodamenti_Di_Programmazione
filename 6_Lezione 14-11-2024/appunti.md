@@ -15,6 +15,7 @@ const es1arrow = () => {
   }
 };
 
+// infine assegnazione oggetti con stampa cosi si può capire come funziona un oggetto
 let segno = {
   nome: "Prova",
   Inizio: new Date.now(),
@@ -139,4 +140,13 @@ const miaBicicletta = new Bicicletta(
 
 console.log(miaBicicletta);
 
+```
+
+es funzioni
+
+```JS
+function nuovafunzione(parametro1, parametro2) {
+  return risultato;
+}
+const nuovafunzionearrow = (parametro1, parametro2) => risultato;
 ```
