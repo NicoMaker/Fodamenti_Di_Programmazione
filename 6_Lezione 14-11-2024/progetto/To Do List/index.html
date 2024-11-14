@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista delle cose da fare</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="calendar">
+      <h1>
+        Data corrente
+        <span id="current-date"></span>
+      </h1>
+    </div>
+
+    <div class="todo-container">
+      <h2>Lista delle cose da fare</h2>
+      <div class="input-container">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Aggiungi un' attività ..."
+        />
+        <button id="add-task-btn">Aggiungi</button>
+      </div>
+      <ul id="task-list"></ul>
+      <p id="task-counter">
+        attività da completare:
+        <span id="remaining-task">0</span>
+      </p>
+    </div>
+  </body>
+</html>
