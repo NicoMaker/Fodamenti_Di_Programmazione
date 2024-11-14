@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="testo">Testo originale</div>
+    <button onclick="CambiaTesto()">Cambia testo</button>
+    <button onclick="CambiaColore()">Cambia colore</button>
+    <button onclick="Reset()">reset</button>
+
+    <script>
+      const CambiaTesto = () =>
+          (document.getElementById("testo").innerHTML = "Testo aggiornato"),
+        CambiaColore = () =>
+          (document.getElementById("testo").style.color = "red"),
+        Reset = () => {
+          document.getElementById("testo").style.color = "black";
+          document.getElementById("testo").innerHTML = "testo originale";
+        };
+    </script>
+  </body>
+</html>
