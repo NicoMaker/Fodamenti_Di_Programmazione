@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulazione Robot Tagliaerba</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulazione Robot Tagliaerba</h1>
+        <div id="grid"></div>
+        <div class="controls">
+            <button onclick="move('nord')">Nord</button>
+            <button onclick="move('sud')">Sud</button>
+            <button onclick="move('est')">Est</button>
+            <button onclick="move('ovest')">Ovest</button>
+        </div>
+        <div id="status">Posizione robot: (0, 0)</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

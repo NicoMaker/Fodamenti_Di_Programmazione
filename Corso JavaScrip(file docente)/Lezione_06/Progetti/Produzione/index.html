@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tracciamento Produzione</title>
+		<link rel="stylesheet" href="styles.css">
+		<!-- Includi il CDN di Chart.js -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Tracciamento Produzione Giornaliera</h1>
+			<form id="productionForm">
+				<input type="number" id="dailyProduction" placeholder="Prodotti completati" required>
+				<button type="submit">Aggiungi Produzione</button>
+			</form>
+			<div id="totalProduction">Produzione totale: 0</div>
+			<!-- Aggiungi il canvas per il grafico -->
+			<canvas id="productionChart" width="400" height="200"></canvas>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
