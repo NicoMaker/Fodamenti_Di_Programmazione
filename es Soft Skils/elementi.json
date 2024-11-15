@@ -1,0 +1,17 @@
+[
+  { "nome": "Specchio", "posizione_IO": 7, "posizione_Gruppo": 3 },
+  { "nome": "1 Litro d’Acqua", "posizione_IO": 0, "posizione_Gruppo": 0 },
+  { "nome": "Soprabito", "posizione_IO": 6, "posizione_Gruppo": 5 },
+  { "nome": "Impermeabile", "posizione_IO": 10, "posizione_Gruppo": 10 },
+  { "nome": "Paracadute", "posizione_IO": 12, "posizione_Gruppo": 11 },
+  { "nome": "Occhiali da sole", "posizione_IO": 3, "posizione_Gruppo": 12 },
+  { "nome": "Torcia Elettrica", "posizione_IO": 11, "posizione_Gruppo": 9 },
+  { "nome": "Coltello", "posizione_IO": 13, "posizione_Gruppo": 8 },
+  { "nome": "Pistola", "posizione_IO": 8, "posizione_Gruppo": 13 },
+  { "nome": "Garze", "posizione_IO": 5, "posizione_Gruppo": 8 },
+  { "nome": "Mappa", "posizione_IO": 1, "posizione_Gruppo": 2 },
+  { "nome": "Bussola", "posizione_IO": 2, "posizione_Gruppo": 1 },
+  { "nome": "Libro di Animali", "posizione_IO": 9, "posizione_Gruppo": 4 },
+  { "nome": "2 Litri di Vodka", "posizione_IO": 14, "posizione_Gruppo": 7 },
+  { "nome": "Pastigle di sale", "posizione_IO": 4, "posizione_Gruppo": 14 }
+]
