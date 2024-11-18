@@ -6,7 +6,7 @@ frutti.pop(); // rimuovi ultimo
 console.log(frutti[1]); // leggi 2 elemento array
 console.log(frutti.length); // elementi array
 
-frutti.splice(2, 1); // elimina il 3 elemento con uno altreimenti se fosse 2 dopo eliminerebbe il 3 e il 4
+frutti.splice(2, 1); // elimina il 3 elemento con uno altrimenti se fosse 2 dopo eliminerebbe il 3 e il 4
 
 // oggetto
 let persona = {
