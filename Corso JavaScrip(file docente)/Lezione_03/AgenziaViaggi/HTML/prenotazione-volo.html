@@ -3,12 +3,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Prenotazione Crociera</title>
-		<link rel="stylesheet" href="style.css">
+		<title>Prenotazione Volo</title>
+		<link rel="stylesheet" href="../style.css">
 	</head>
 	<body>
 		<header>
-			<h1>Prenotazione Crociera</h1>
+			<h1>Prenotazione Volo</h1>
 			<a href="index.html" class="back-link">Torna alla pagina principale</a>
 		</header>
 		<main>
@@ -19,11 +19,14 @@
 				<label for="departure">Data di Partenza:</label>
 				<input type="date" id="departure" name="departure" required>
 				
-				<label for="cabin">Tipo di Cabina:</label>
-				<select id="cabin" name="cabin">
-					<option value="interna">Interna</option>
-					<option value="esterna">Esterna</option>
-					<option value="suite">Suite</option>
+				<label for="arrival">Data di Arrivo:</label>
+				<input type="date" id="arrival" name="arrival" required>
+				
+				<label for="class">Classe:</label>
+				<select id="class" name="class">
+					<option value="economy">Economica</option>
+					<option value="business">Business</option>
+					<option value="first">Prima Classe</option>
 				</select>
 				
 				<button type="submit">Invia Prenotazione</button>
