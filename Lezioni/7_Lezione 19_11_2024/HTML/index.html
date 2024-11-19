@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gestore Articoli</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style.css" />
     <script src="../JS/script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>Gestore Articoli</h1>7
+      <h1>Gestore Articoli</h1>
 
-        <div class="form">
-            <input type="text" id="tiolo" placeholder="tiolo dell'articolo">
-        </div>
+      <div class="form">
+        <input type="text" id="titolo" placeholder="Titolo dell'articolo" />
+        <textarea
+          id="descrizione"
+          placeholder="descrizione dell'articolo"
+        ></textarea>
+        <button id="aggiungi">aggiungi Articolo</button>
+      </div>
+
+      <ul id="articoli"></ul>
     </div>
-</body>
+  </body>
 </html>
