@@ -1,0 +1,83 @@
+/* styles.css */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f7f7f7;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.container {
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	width: 300px;
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 20px;
+	color: #555;
+}
+
+.input-container {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+input[type="text"] {
+	flex: 1;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	outline: none;
+}
+
+button {
+	background-color: #28a745;
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	margin-left: 5px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #218838;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	background: #f8f9fa;
+	margin: 5px 0;
+	padding: 10px;
+	border-radius: 4px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+li .remove-btn {
+	background-color: #dc3545;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	padding: 5px 10px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+li .remove-btn:hover {
+	background-color: #c82333;
+}
