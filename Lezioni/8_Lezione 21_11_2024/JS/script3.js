@@ -62,3 +62,22 @@ function showAppointmentsForDay (day) {
 }
 
 appointmentsForDay.innerHTML = <h3>Appuntamenti per il $(day)</h3>;
+
+
+appointmentsForDay.innerHTML = <h3>Appuntamenti per il $(day)</h3>;
+
+if (dayAppointments.lenght === 0) {
+    appointmentsForDay.innerHTML += '<p>Non ci sono appuntamenti per questo giorno.</p>';
+            }else {
+    const list = document.createElement ('ul'):
+    dayAppointments.forEach (app, index) => {
+        const listItem = document.createElement ('li');
+        listItem.textContent =$(app.title)- ${new Date (app.date).toLocaleTimeString()};
+    // Pulsante per modificare l'appuntamento
+    const editBtn = document.createElement ('button');
+    editBtn.textContent = 'Modifica';
+    editBtn.classList.add ('edit');
+    editBtn.addEventListener ('click', () => editAppointment(index));
+    }
+}
+}
