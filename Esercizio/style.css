@@ -86,3 +86,35 @@ button.delete {
   background-color: #f44336;
   color: white;
 }
+
+button#removeListButton {
+  background-color: #2196f3;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul#dynamicList {
+  max-height: 150px; /* Altezza massima visibile */
+  overflow-y: auto; /* Barra di scorrimento verticale */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+ul#dynamicList {
+  max-height: 150px; /* Altezza massima visibile */
+  overflow-y: auto; /* Barra di scorrimento verticale */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+ul#dynamicList li:nth-child(4n) {
+  border-top: 1px solid black; /* Linea sopra */
+  padding-top: 10px; /* Spazio tra il testo e la riga */
+  margin-top: 5px; /* Spazio aggiuntivo sopra l'elemento */
+}

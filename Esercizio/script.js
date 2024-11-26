@@ -48,3 +48,12 @@ addButton.addEventListener("click", () => {
 form.addEventListener("input", () => {
   errorMessage.hidden = true;
 });
+
+// Pulsante Rimuovi Lista
+const removeListButton = document.getElementById("removeListButton");
+
+// Rimuovi tutti gli elementi dalla lista
+removeListButton.addEventListener("click", () => {
+  dynamicList.innerHTML = ""; // Cancella tutto il contenuto della lista
+});
+
