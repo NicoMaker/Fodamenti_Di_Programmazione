@@ -71,6 +71,13 @@ li {
   background-color: #f0f0f0;
   margin: 5px 0;
   border-radius: 5px;
+  position: relative; /* Per mantenere i pulsanti sempre visibili */
+}
+
+li .buttons {
+  display: flex;
+  gap: 5px; /* Spazio tra i pulsanti */
+  margin-left: auto; /* Spinge i pulsanti all'estrema destra */
 }
 
 li button {
@@ -86,6 +93,7 @@ button.delete {
   background-color: #f44336;
   color: white;
 }
+
 
 button#removeListButton {
   background-color: #2196f3;
@@ -113,6 +121,7 @@ ul#dynamicList {
   border-radius: 5px;
 }
 
+/* ogni 4 elementi applica le seguenti caratteristiche */
 ul#dynamicList li:nth-child(4n) {
   border-top: 1px solid black; /* Linea sopra */
   padding-top: 10px; /* Spazio tra il testo e la riga */

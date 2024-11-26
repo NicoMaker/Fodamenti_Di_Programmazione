@@ -23,8 +23,10 @@ addButton.addEventListener("click", () => {
   const li = document.createElement("li");
   li.innerHTML = `
     ${name} ${surname} - ${email}
-    <button class="modify">Modifica</button>
-    <button class="delete">Elimina</button>
+    <div class="buttons">
+      <button class="modify">Modifica</button>
+      <button class="delete">Elimina</button>
+    </div>
   `;
 
   // Modifica elemento
