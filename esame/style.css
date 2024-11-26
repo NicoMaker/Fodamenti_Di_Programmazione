@@ -87,7 +87,7 @@ button:hover {
 
 /* Lista dei clienti */
 .client-list {
-  width: 50%; /* Larghezza della lista */
+  width: 60%; /* Larghezza della lista */
   margin: 20px auto; /* Centra la lista orizzontalmente */
   list-style: none; /* Rimuove i punti elenco */
 }
