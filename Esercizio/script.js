@@ -56,4 +56,3 @@ const removeListButton = document.getElementById("removeListButton");
 removeListButton.addEventListener("click", () => {
   dynamicList.innerHTML = ""; // Cancella tutto il contenuto della lista
 });
-
