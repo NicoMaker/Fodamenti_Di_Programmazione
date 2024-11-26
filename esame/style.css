@@ -1,0 +1,314 @@
+/* Impostazioni di base per il corpo della pagina */
+body {
+  font-family: Arial, sans-serif; /* Imposta il font di default per la pagina */
+  margin: 0; /* Rimuove i margini di default del body */
+  padding: 0; /* Rimuove i padding di default */
+  background-color: #f4f4f9; /* Imposta uno sfondo chiaro per la pagina */
+}
+
+/* Contenitore principale della pagina */
+.container {
+  width: 80%; /* Imposta la larghezza del contenitore al 80% */
+  margin: 0 auto; /* Centra il contenitore orizzontalmente */
+  padding: 20px; /* Distanza interna dal bordo del contenitore */
+  background: #fff; /* Imposta lo sfondo del contenitore come bianco */
+  border-radius: 8px; /* Angoli arrotondati per il contenitore */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera attorno al contenitore */
+}
+
+/* Stile per il modulo del cliente */
+#clientForm {
+  border: 1px solid #ccc; /* Bordo sottile grigio per il modulo */
+  padding: 10px; /* Distanza interna per il modulo */
+  border-radius: 5px; /* Angoli arrotondati */
+}
+
+/* Titolo principale della pagina */
+h1 {
+  text-align: center; /* Allinea il titolo al centro */
+  margin-bottom: 20px; /* Distanza inferiore dal titolo */
+}
+
+/* Formattazione del modulo */
+.form {
+  width: 50%; /* Larghezza del modulo al 50% */
+  margin: 0 auto; /* Centra il modulo orizzontalmente */
+}
+
+/* Stile per ogni gruppo di campo nel modulo */
+.form-group {
+  display: flex; /* Disposizione in riga dei suoi elementi */
+  justify-content: space-between; /* Spazia gli elementi in modo che occupino tutta la larghezza */
+  margin-bottom: 15px; /* Distanza inferiore tra i gruppi di campi */
+}
+
+/* Etichetta di ciascun campo del modulo */
+label {
+  width: 30%; /* Larghezza dell'etichetta */
+}
+
+/* Stile per i campi di input */
+input {
+  width: 65%; /* Larghezza degli input */
+  padding: 8px; /* Spaziatura interna negli input */
+  font-size: 16px; /* Imposta la dimensione del font negli input */
+}
+
+/* Messaggio di errore per i campi */
+.error-message {
+  color: red; /* Colore rosso per i messaggi di errore */
+  font-size: 12px; /* Imposta la dimensione del font per il messaggio di errore */
+  margin-top: 5px; /* Distanza sopra il messaggio di errore */
+}
+
+/* Contenitore per i pulsanti di azione */
+.form-actions {
+  display: flex; /* Disposizione dei pulsanti in riga */
+  justify-content: space-between; /* Spazio tra i pulsanti */
+  align-items: center; /* Allinea verticalmente i pulsanti */
+  margin-top: 20px; /* Distanza superiore */
+}
+
+/* Stile dei pulsanti */
+button {
+  padding: 10px 20px; /* Spaziatura interna per i pulsanti */
+  border: none; /* Rimuove il bordo di default */
+  border-radius: 5px; /* Angoli arrotondati per i pulsanti */
+  background-color: #007bff; /* Colore di sfondo blu per i pulsanti */
+  color: white; /* Colore del testo bianco */
+  font-size: 16px; /* Dimensione del font */
+  cursor: pointer; /* Cambia il cursore in un puntatore per i pulsanti */
+}
+
+/* Stile per quando il mouse passa sopra i pulsanti */
+button:hover {
+  background-color: #0056b3; /* Cambia il colore di sfondo a un blu più scuro */
+}
+
+/* Lista dei clienti */
+.client-list {
+  width: 50%; /* Larghezza della lista */
+  margin: 20px auto; /* Centra la lista orizzontalmente */
+  list-style: none; /* Rimuove i punti elenco */
+}
+
+/* Stile per ciascun elemento della lista dei clienti */
+.client-list li {
+  display: flex; /* Disposizione in riga per gli elementi */
+  justify-content: space-between; /* Spazio tra i dettagli del cliente */
+  padding: 10px; /* Spaziatura interna degli elementi */
+  margin-bottom: 10px; /* Distanza tra gli elementi */
+  background-color: #e9ecef; /* Colore di sfondo grigio chiaro */
+  border-radius: 5px; /* Angoli arrotondati */
+}
+
+/* Pulsante per modificare un cliente */
+button.modifica {
+  background-color: #ffc107; /* Colore giallo per il pulsante modifica */
+  color: black; /* Colore del testo nero */
+}
+
+/* Pulsante per eliminare un cliente */
+button.elimina {
+  background-color: #dc3545; /* Colore rosso per il pulsante elimina */
+}
+
+/* Contenitore per i pulsanti */
+.bottons-container {
+  display: flex; /* Disposizione in riga dei pulsanti */
+  justify-content: center; /* Centra i pulsanti */
+  gap: 10px; /* Distanza tra i pulsanti */
+  margin-top: 20px; /* Distanza superiore dai pulsanti */
+}
+
+/* Contenitore per i pulsanti di sinistra */
+.left-buttons {
+  display: flex; /* Disposizione in riga */
+  gap: 10px; /* Distanza tra i pulsanti */
+}
+
+/* Contenitore per il pulsante di destra */
+.right-button {
+  display: flex;
+}
+
+/* Pulsante "Annulla" con colore grigio */
+#annulla {
+  background-color: grey;
+}
+
+/* Pulsante "Pulisci Archivio" o "Elimina" con colore rosso */
+#pulisci_archivio,
+button.elimina {
+  background-color: red;
+}
+
+/* lista dinamica */
+ul#clientList {
+  max-height: 250px; /* Altezza massima per la lista */
+  overflow-y: auto; /* Abilita lo scorrimento verticale quando il contenuto supera l'altezza */
+  padding: 5px; /* Distanza interna */
+  border: 1px solid #ccc; /* Bordo grigio */
+  border-radius: 4px; /* Angoli arrotondati */
+  background-color: white; /* Colore di sfondo bianco */
+  width: 95%;
+}
+
+/* Stile per la paginazione */
+#pagination {
+  display: flex; /* Disposizione in riga dei pulsanti di paginazione */
+  justify-content: center; /* Centra i pulsanti di paginazione */
+  align-items: center; /* Allinea verticalmente i pulsanti */
+  margin-top: 10px; /* Distanza superiore */
+}
+
+#pagination button {
+  padding: 5px 10px; /* Spaziatura interna per i pulsanti di paginazione */
+  margin: 0 5px; /* Distanza tra i pulsanti */
+}
+
+#pagination span {
+  margin: 0 10px; /* Distanza tra gli span */
+}
+
+/* Effetto hover per input e pulsanti */
+input:hover,
+button:hover {
+  transform: scale(
+    1.05
+  ); /* Ingrossa leggermente gli input e i pulsanti quando si passa sopra */
+}
+
+/* Media Query per dispositivi mobili */
+@media (max-width: 768px) {
+  .container {
+    width: 90%; /* Aumenta la larghezza del contenitore su dispositivi più piccoli */
+    padding: 10px; /* Diminuisce il padding */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Diminuisce la dimensione del titolo */
+  }
+
+  .form {
+    width: 100%; /* Rende il modulo a larghezza piena */
+  }
+
+  .form-group {
+    flex-direction: column; /* Rende i campi del modulo disposti in colonna */
+    align-items: flex-start; /* Allinea a sinistra gli elementi */
+  }
+
+  label {
+    width: 100%; /* Le etichette occupano tutta la larghezza */
+    margin-bottom: 5px; /* Distanza inferiore alle etichette */
+  }
+
+  input {
+    width: 100%; /* Gli input occupano tutta la larghezza disponibile */
+  }
+
+  .form-actions {
+    flex-direction: column; /* Disposizione verticale per i pulsanti */
+    align-items: flex-start; /* Allinea i pulsanti a sinistra */
+  }
+
+  .left-buttons {
+    width: 100%; /* I pulsanti di sinistra occupano tutta la larghezza */
+    justify-content: space-between; /* Spazio tra i pulsanti */
+  }
+
+  .right-button {
+    width: 100%; /* Il pulsante di destra occupa tutta la larghezza */
+    margin-top: 10px; /* Distanza superiore */
+  }
+
+  .client-list {
+    width: 100%; /* La lista clienti occupa tutta la larghezza */
+  }
+
+  ul#clientList {
+    max-height: 200px; /* Aumenta l'altezza massima per la lista */
+  }
+
+  button {
+    width: 100%; /* I pulsanti occupano tutta la larghezza disponibile */
+    margin-top: 10px; /* Distanza superiore */
+  }
+
+  #pagination {
+    flex-direction: column; /* Disposizione verticale per i pulsanti di paginazione */
+  }
+}
+
+/* Media Query per dispositivi molto piccoli */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem; /* Diminuisce ulteriormente la dimensione del titolo */
+  }
+
+  .form-group {
+    margin-bottom: 10px; /* Diminuisce la distanza tra i gruppi di campi */
+  }
+
+  .form-actions {
+    margin-top: 15px; /* Aumenta la distanza superiore per i pulsanti */
+  }
+
+  .bottons-container {
+    flex-direction: column; /* Disposizione verticale dei pulsanti */
+    gap: 5px; /* Diminuisce la distanza tra i pulsanti */
+  }
+
+  .client-list li {
+    flex-direction: column; /* Disposizione verticale per gli elementi della lista */
+    align-items: flex-start; /* Allinea gli elementi a sinistra */
+  }
+}
+
+/* Modifica dello stile della lista dei clienti */
+.client-list li {
+  background-color: white; /* Colore di sfondo bianco */
+  border-bottom: 1px solid black; /* Bordo inferiore per separare gli elementi */
+}
+
+/* Modifica per la disposizione dei gruppi di campi nel modulo */
+.form-group {
+  display: flex; /* Disposizione in riga */
+  justify-content: space-between; /* Spazio tra i campi */
+  align-items: center; /* Allinea verticalmente gli elementi */
+  margin-bottom: 15px; /* Distanza inferiore */
+}
+
+/* Modifica per l'etichetta dei campi */
+label {
+  flex-basis: 20%; /* Imposta la larghezza dell'etichetta */
+  margin-right: 10px; /* Aggiunge distanza tra etichetta e campo */
+}
+
+/* Modifica per gli input */
+input {
+  width: 75%; /* Imposta la larghezza degli input */
+  padding: 8px; /* Spaziatura interna */
+  font-size: 16px; /* Dimensione del font */
+}
+
+/* Modifica per separare il campo Data di Acquisizione */
+.form-group:last-child {
+  display: block; /* Rende l'ultimo gruppo un blocco */
+  width: 100%; /* Imposta la larghezza al 100% */
+  margin-top: 15px; /* Distanza superiore */
+}
+
+/* Modifica per l'etichetta della Data di Acquisizione */
+label[for="dataAcquisizione"] {
+  width: 100%; /* Etichetta occupa tutta la larghezza */
+  margin-bottom: 5px; /* Distanza inferiore */
+}
+
+/* Modifica per il campo Data di Acquisizione */
+input#dataAcquisizione {
+  width: 100%; /* Campo occupa tutta la larghezza */
+  padding: 8px; /* Distanza interna */
+  font-size: 16px; /* Dimensione del font */
+}

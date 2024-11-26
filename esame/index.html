@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+  <!-- Inizia il documento HTML, con il linguaggio impostato su italiano -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Imposta il set di caratteri su UTF-8 per supportare caratteri speciali italiani -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Imposta il viewport per garantire una visualizzazione corretta su dispositivi mobili -->
+    <title>Gestione Situazione Debitoria Clienti</title>
+    <!-- Titolo della pagina -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Collega il foglio di stile CSS per la formattazione -->
+    <script src="script.js" defer></script>
+    <!-- Collega il file JavaScript (defer ritarda l'esecuzione fino a quando il documento è stato completamente caricato) -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Collega la libreria di icone Material Design per usare icone -->
+
+    <link
+      rel="icon"
+      href="https://c8.alamy.com/compit/epm981/illustrazione-di-nero-e-icona-di-cromo-per-il-report-epm981.jpg"
+      type="image/x-icon"
+    />
+    <!-- add fav icon-->
+  </head>
+  <body>
+    <!-- Inizia il corpo della pagina -->
+    <div class="container">
+      <!-- Contenitore principale del modulo -->
+      <h1>Riepilogo Situazione Cliente</h1>
+      <!-- Titolo principale della pagina -->
+      <form id="clientForm" class="form">
+        <!-- Inizia il modulo -->
+        <div class="form-group">
+          <!-- Contenitore di un singolo campo del modulo -->
+          <label for="nome"><strong>Nome:</strong></label>
+          <!-- Etichetta per il campo "Nome" -->
+          <input
+            type="text"
+            id="nome"
+            maxlength="24"
+            required
+            placeholder="Inserisci nome"
+          />
+          <!-- Campo di input per il nome, con lunghezza massima di 24 caratteri e un placeholder -->
+          <small class="error-message"></small>
+          <!-- Elemento per visualizzare eventuali messaggi di errore -->
+        </div>
+        <div class="form-group">
+          <!-- Contenitore per il campo "Cognome" -->
+          <label for="cognome"><strong>Cognome:</strong></label>
+          <!-- Etichetta per il campo "Cognome" -->
+          <input
+            type="text"
+            id="cognome"
+            maxlength="24"
+            required
+            placeholder="Inserisci cognome"
+          />
+          <!-- Campo di input per il cognome -->
+          <small class="error-message"></small>
+          <!-- Messaggio di errore -->
+        </div>
+        <div class="form-group">
+          <!-- Contenitore per il campo "Email" -->
+          <label for="email"><strong>Email:</strong></label>
+          <!-- Etichetta per il campo "Email" -->
+          <input
+            type="email"
+            id="email"
+            maxlength="40"
+            required
+            placeholder="Inserisci l'email"
+          />
+          <!-- Campo di input per l'email -->
+          <small class="error-message"></small>
+          <!-- Messaggio di errore -->
+        </div>
+        <div class="form-group">
+          <!-- Contenitore per il campo "Saldo" -->
+          <label for="saldo"><strong>Saldo:</strong></label>
+          <!-- Etichetta per il campo "Saldo" -->
+          <input
+            type="number"
+            id="saldo"
+            step="0.01"
+            max="50000"
+            required
+            placeholder="Inserisci il saldo"
+          />
+          <!-- Campo di input per il saldo con valori decimali e limite massimo di 50.000 -->
+          <small class="error-message"></small>
+          <!-- Messaggio di errore -->
+        </div>
+        <div class="form-group">
+          <!-- Contenitore per il campo "Data Acquisizione" -->
+          <label for="dataAcquisizione"
+            ><strong>Data Acquisizione: </strong></label
+          >
+          <!-- Etichetta per il campo "Data Acquisizione" -->
+          <input type="date" id="dataAcquisizione" required />
+          <!-- Campo di input per la data -->
+          <small class="error-message"></small>
+          <!-- Messaggio di errore -->
+        </div>
+        <div class="form-actions">
+          <!-- Contenitore per i pulsanti di azione -->
+          <div class="left-buttons">
+            <!-- Contenitore per i pulsanti di sinistra -->
+            <button id="aggiungi">Aggiungi</button>
+            <!-- Pulsante per aggiungere un cliente -->
+            <button id="annulla">Annulla</button>
+            <!-- Pulsante per annullare l'operazione -->
+          </div>
+          <div class="right-button">
+            <!-- Contenitore per il pulsante di destra -->
+            <button id="pulisci_archivio">Pulisci Archivio</button>
+            <!-- Pulsante per pulire l'archivio -->
+          </div>
+        </div>
+      </form>
+      <!-- Fine del modulo -->
+      <div id="clientListContainer" class="client-list">
+        <!-- Contenitore per la lista dei clienti -->
+        <ul id="clientList"></ul>
+        <!-- Lista vuota per i clienti -->
+      </div>
+    </div>
+  </body>
+</html>
