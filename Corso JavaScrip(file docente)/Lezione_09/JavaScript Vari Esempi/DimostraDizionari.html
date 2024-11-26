@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Esempio di Strutture Dati in JavaScript</title>
+		<style>
+			body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+			}
+			h2 {
+            color: #333;
+			}
+			.section {
+            margin-bottom: 30px;
+			}
+			.output {
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<h1>Esempio di Strutture Dati in JavaScript</h1>
+		
+		<div class="section">
+			<h2>Dizionario (Oggetto)</h2>
+			<div class="output" id="dizionario-output"></div>
+		</div>
+		
+		<div class="section">
+			<h2>Map (Mappa)</h2>
+			<div class="output" id="mappa-output"></div>
+		</div>
+		
+		<div class="section">
+			<h2>Array (Collezione Ordinata)</h2>
+			<div class="output" id="array-output"></div>
+		</div>
+		
+		<div class="section">
+			<h2>Set (Insieme Unico)</h2>
+			<div class="output" id="set-output"></div>
+		</div>
+		
+		<div class="section">
+			<h2>WeakMap (Mappa Debole)</h2>
+			<div class="output" id="weakmap-output"></div>
+		</div>
+		
+		<script>
+			// 1. Oggetto come dizionario
+			const dizionario = {
+				"nome": "Mario",
+				"cognome": "Rossi",
+				"eta": 30
+			};
+			
+			// Modifica e aggiunta valori
+			dizionario["professione"] = "Ingegnere";
+			dizionario["eta"] = 31;
+			
+			// Visualizzare il dizionario
+			document.getElementById("dizionario-output").innerHTML = `
+            Nome: ${dizionario["nome"]}<br>
+            Cognome: ${dizionario["cognome"]}<br>
+            Età: ${dizionario["eta"]}<br>
+            Professione: ${dizionario["professione"]}<br>
+			`;
+			
+			// 2. Map per un dizionario con chiavi di tipo diverso
+			const mappa = new Map();
+			mappa.set("nome", "Giulia");
+			mappa.set(100, "Numero come chiave");
+			mappa.set(true, "Valore booleano");
+			
+			// Visualizzare la mappa
+			document.getElementById("mappa-output").innerHTML = `
+            Nome: ${mappa.get("nome")}<br>
+            Chiave numerica (100): ${mappa.get(100)}<br>
+            Chiave booleana (true): ${mappa.get(true)}<br>
+			`;
+			
+			// 3. Array per collezione ordinata
+			const array = [10, 20, 30, 40, 50];
+			array.push(60);  // Aggiungere un nuovo valore
+			
+			// Visualizzare l'array
+			document.getElementById("array-output").innerHTML = `
+            Array: ${array.join(", ")}<br>
+			`;
+			
+			// 4. Set per valori unici
+			const set = new Set();
+			set.add(10);
+			set.add(20);
+			set.add(30);
+			set.add(10);  // Il valore 10 non verrà aggiunto due volte
+			
+			// Visualizzare il set
+			document.getElementById("set-output").innerHTML = `
+            Set (valori unici): ${Array.from(set).join(", ")}<br>
+			`;
+			
+			// 5. WeakMap (debole, usata per oggetti)
+			const weakmap = new WeakMap();
+			let oggetto1 = { id: 1, nome: "Object 1" };
+			let oggetto2 = { id: 2, nome: "Object 2" };
+			
+			weakmap.set(oggetto1, "Valore per oggetto1");
+			weakmap.set(oggetto2, "Valore per oggetto2");
+			
+			// Visualizzare la weakmap
+			document.getElementById("weakmap-output").innerHTML = `
+            Oggetto1: ${weakmap.get(oggetto1)}<br>
+            Oggetto2: ${weakmap.get(oggetto2)}<br>
+			`;
+		</script>
+		
+	</body>
+</html>

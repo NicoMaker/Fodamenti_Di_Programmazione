@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Rubrica Interattiva Estesa</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<h1>Rubrica Interattiva Estesa</h1>
+		<div class="controls">
+			<button id="loadUsersBtn">Carica Utenti</button>
+			<input type="text" id="searchInput" placeholder="Cerca per nome...">
+		</div>
+		<div id="pagination" class="hidden">
+			<button id="prevPage" disabled>&laquo; Precedente</button>
+			<span id="pageInfo"></span>
+			<button id="nextPage">&raquo; Successiva</button>
+		</div>
+		<div id="userList"></div>
+		<div id="userDetails" class="hidden">
+			<h2>Dettagli Utente</h2>
+			<div id="detailsContent"></div>
+			<button id="editUserBtn">Modifica</button>
+			<button id="deleteUserBtn">Elimina</button>
+			<button id="backBtn">Torna alla lista</button>
+		</div>
+		<div id="editUserForm" class="hidden">
+			<h2>Modifica Utente</h2>
+			<form id="userEditForm">
+				<label for="editName">Nome:</label>
+				<input type="text" id="editName" required>
+				<label for="editEmail">Email:</label>
+				<input type="email" id="editEmail" required>
+				<label for="editPhone">Telefono:</label>
+				<input type="text" id="editPhone" required>
+				<button type="submit">Salva</button>
+				<button type="button" id="cancelEditBtn">Annulla</button>
+			</form>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>

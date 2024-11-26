@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista Dinamica</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gestione Lista Dinamica</h1>
+      <form id="inputForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="surname">Cognome:</label>
+        <input type="text" id="surname" name="surname" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <button type="submit" id="addButton">Aggiungi</button>
+        <button type="reset" id="clearButton">Pulisci</button>
+      </form>
+      <div id="errorMessage" class="error" hidden>
+        Errore: Compila tutti i campi!
+      </div>
+      <h2>Lista Dinamica</h2>
+      <ul id="dynamicList"></ul>
+    </div>
+  </body>
+</html>

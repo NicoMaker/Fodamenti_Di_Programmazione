@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Guida al Casting in JavaScript</title>
+		<style>
+			body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+			}
+			header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+			}
+			main {
+            padding: 20px;
+			}
+			.content {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+			}
+			.content h2 {
+            color: #333;
+			}
+			.code-block {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: "Courier New", Courier, monospace;
+            margin-bottom: 20px;
+			}
+			footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<header>
+			<h1>Guida Completa al Casting in JavaScript</h1>
+		</header>
+		
+		<main>
+			<section class="content">
+				<h2>Cos'è il Casting in JavaScript?</h2>
+				<p>In JavaScript, il "casting" (o "type coercion") è il processo attraverso cui un valore viene convertito da un tipo di dato a un altro. JavaScript è un linguaggio tipizzato dinamicamente, il che significa che non è necessario dichiarare esplicitamente il tipo di variabile. Il casting può avvenire automaticamente (implicito) o manualmente (esplicito), a seconda della situazione.</p>
+			</section>
+			
+			<section class="content">
+				<h2>1. Casting Implicito</h2>
+				<p>Il casting implicito avviene automaticamente quando JavaScript converte un tipo di dato in un altro senza che sia necessario il nostro intervento. Ad esempio, quando sommiamo un numero a una stringa, JavaScript converte automaticamente il numero in una stringa prima di eseguire l'operazione:</p>
+				
+				<div class="code-block">
+					<pre><code>let numero = 5;
+						let testo = "Il numero è: ";
+						let risultato = testo + numero;
+					console.log(risultato); // "Il numero è: 5"</code></pre>
+				</div>
+				
+				<p>In questo esempio, JavaScript converte automaticamente il numero 5 in una stringa prima di concatenarlo al testo.</p>
+			</section>
+			
+			<section class="content">
+				<h2>2. Casting Esplicito</h2>
+				<p>Il casting esplicito è il processo in cui l'utente fornisce esplicitamente le istruzioni per convertire un valore da un tipo all'altro. In JavaScript, possiamo utilizzare alcune funzioni per fare questo tipo di conversione:</p>
+				
+				<h3>Convertire una stringa in un numero:</h3>
+				<div class="code-block">
+					<pre><code>let stringa = "123";
+						let numero = Number(stringa);
+					console.log(numero); // 123 (tipo number)</code></pre>
+				</div>
+				
+				<h3>Convertire un numero in una stringa:</h3>
+				<div class="code-block">
+					<pre><code>let numero = 456;
+						let stringa = numero.toString();
+					console.log(stringa); // "456" (tipo string)</code></pre>
+				</div>
+				
+				<h3>Convertire un valore booleano in un numero:</h3>
+				<div class="code-block">
+					<pre><code>let valore = true;
+						let numeroBooleano = Number(valore);
+					console.log(numeroBooleano); // 1 (true è convertito in 1)</code></pre>
+				</div>
+				
+				<p>Questi sono esempi di casting esplicito che utilizzano metodi come <code>Number()</code> e <code>toString()</code> per effettuare conversioni esplicite tra i tipi di dato.</p>
+			</section>
+			
+			<section class="content">
+				<h2>3. Altri Metodi Utilizzati nel Casting</h2>
+				<ul>
+					<li><strong>String():</strong> converte un valore in una stringa. Esempio: <code>String(123)</code> restituirà "123".</li>
+					<li><strong>Boolean():</strong> converte un valore in booleano (vero o falso). Esempio: <code>Boolean(0)</code> restituirà <code>false</code>.</li>
+					<li><strong>parseInt() e parseFloat():</strong> convertono una stringa in un numero intero o decimale, rispettivamente. Esempio: <code>parseInt("42")</code> restituirà <code>42</code>.</li>
+				</ul>
+			</section>
+		</main>
+		
+		<footer>
+			<p>JavaScript Guide - Copyright 2024</p>
+		</footer>
+		
+	</body>
+</html>

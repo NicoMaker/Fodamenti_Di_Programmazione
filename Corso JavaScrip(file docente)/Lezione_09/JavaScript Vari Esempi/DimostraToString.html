@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Esempio di toString() in JavaScript</title>
+		<style>
+			body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+			}
+			.container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			}
+			h1 {
+            text-align: center;
+            color: #333;
+			}
+			label {
+            display: block;
+            margin: 10px 0 5px;
+			}
+			input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+			}
+			button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+			}
+			button:hover {
+            background-color: #45a049;
+			}
+			.output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="container">
+			<h1>Creazione e Visualizzazione di un Oggetto Persona</h1>
+			<label for="name">Nome:</label>
+			<input type="text" id="name" placeholder="Inserisci il tuo nome">
+			
+			<label for="age">Età:</label>
+			<input type="text" id="age" placeholder="Inserisci la tua età">
+			
+			<button onclick="createPersona()">Crea Persona</button>
+			
+			<div class="output" id="output"></div>
+		</div>
+		
+		<script>
+			// Definiamo una classe Persona
+			class Persona {
+				constructor(nome, età) {
+					this.nome = nome;
+					this.età = età;
+				}
+				
+				// Sovrascriviamo il metodo toString per una rappresentazione personalizzata
+				toString() {
+					return `${this.nome}, ${this.età} anni`;
+				}
+			}
+			
+			// Funzione per creare una nuova Persona e mostrare il risultato
+			function createPersona() {
+				const nameInput = document.getElementById('name').value;
+				const ageInput = document.getElementById('age').value;
+				
+				// Verifica se i dati inseriti sono validi
+				if (nameInput.trim() === '' || ageInput.trim() === '') {
+					alert('Per favore, inserisci sia il nome che l\'età.');
+					return;
+				}
+				
+				// Crea un'istanza di Persona
+				const persona = new Persona(nameInput, ageInput);
+				
+				// Mostra la rappresentazione dell'oggetto persona usando toString()
+				const outputDiv = document.getElementById('output');
+				outputDiv.textContent = 'Rappresentazione Persona: ' + persona.toString();
+			}
+		</script>
+		
+	</body>
+</html>

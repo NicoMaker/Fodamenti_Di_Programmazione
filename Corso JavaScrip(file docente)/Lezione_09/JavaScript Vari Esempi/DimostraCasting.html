@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Casting da Intero a Double in JavaScript</title>
+		<style>
+			body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+			}
+			header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+			}
+			main {
+            padding: 20px;
+			}
+			.content {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+			}
+			.code-block {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: "Courier New", Courier, monospace;
+            margin-bottom: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<header>
+			<h1>Casting da Intero a Double in JavaScript</h1>
+		</header>
+		
+		<main>
+			<section class="content">
+				<h2>Descrizione del Casting</h2>
+				<p>In JavaScript, i numeri sono trattati come numeri a virgola mobile (tipo <code>Number</code>). Quando si parla di "double", in JavaScript si intende un numero con una precisione maggiore, che in realtà non è distinto dal tipo <code>Number</code>. Tuttavia, puoi trattare un numero come "double" garantendo che contenga decimali.</p>
+				<p>In questo esempio, mostriamo come ottenere il risultato di una funzione che restituisce un intero e poi eseguire il casting a "double", semplicemente aggiungendo un decimale al risultato.</p>
+			</section>
+			
+			<section class="content">
+				<h2>Codice Esempio</h2>
+				<div class="code-block">
+					<pre><code>
+						// Funzione che restituisce un numero intero
+						function calcolaIntero() {
+						return 10;
+						}
+						
+						// Eseguiamo il casting dell'intero a double (numero con decimale)
+						let intero = calcolaIntero();
+						let double = Number(intero.toFixed(2)); // Aggiungiamo il decimale per forzare il double
+						console.log("Intero:", intero); // 10
+						console.log("Double:", double); // 10.00
+					</code></pre>
+				</div>
+				
+				<h3>Spiegazione del Codice:</h3>
+				<p>1. La funzione <code>calcolaIntero()</code> restituisce il numero intero <code>10</code>.</p>
+				<p>2. Poi usiamo <code>toFixed(2)</code> per forzare il valore a un formato con 2 decimali. Questo restituirà una stringa, quindi usiamo <code>Number()</code> per convertirla di nuovo in un numero a virgola mobile.</p>
+				<p>3. In questo modo otteniamo il risultato "double" con precisione a due decimali, anche se JavaScript non fa una distinzione esplicita tra numeri interi e numeri a virgola mobile (tipo double).</p>
+			</section>
+		</main>
+		
+	</body>
+</html>

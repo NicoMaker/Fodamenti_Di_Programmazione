@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Dimostrazione delle Array in JavaScript</title>
+		<style>
+			body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+			}
+			h2 {
+            color: #4CAF50;
+			}
+			.array-list {
+            list-style-type: none;
+            padding: 0;
+			}
+			.array-list li {
+            padding: 5px;
+            background-color: #f1f1f1;
+            margin-bottom: 5px;
+            border-radius: 3px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<h1>Dimostrazione dell'Utilizzo delle Array in JavaScript</h1>
+		
+		<h2>Gestisci una Lista di Elementi</h2>
+		<label for="elemento">Aggiungi un elemento alla lista:</label>
+		<input type="text" id="elemento" placeholder="Scrivi un elemento...">
+		<button onclick="aggiungiElemento()">Aggiungi</button>
+		<button onclick="rimuoviUltimoElemento()">Rimuovi Ultimo</button>
+		<button onclick="rimuoviPrimoElemento()">Rimuovi Primo</button>
+		
+		<h3>Array Attuale:</h3>
+		<ul id="listaElementi" class="array-list">
+			<!-- Gli elementi dell'array verranno visualizzati qui -->
+		</ul>
+		
+		<h3>Array dopo l'operazione:</h3>
+		<p id="arrayOutput"></p>
+		
+		<script>
+			// Creiamo un array vuoto per tenere traccia degli elementi
+			let lista = [];
+			
+			// Funzione per aggiungere un elemento all'array
+			function aggiungiElemento() {
+				let input = document.getElementById("elemento").value;
+				if(input) {
+					lista.push(input); // Aggiunge l'elemento alla fine dell'array
+					document.getElementById("elemento").value = ""; // Svuota il campo di input
+					aggiornaLista();
+					} else {
+					alert("Inserisci un valore valido!");
+				}
+			}
+			
+			// Funzione per rimuovere l'ultimo elemento dell'array
+			function rimuoviUltimoElemento() {
+				lista.pop(); // Rimuove l'ultimo elemento dell'array
+				aggiornaLista();
+			}
+			
+			// Funzione per rimuovere il primo elemento dell'array
+			function rimuoviPrimoElemento() {
+				lista.shift(); // Rimuove il primo elemento dell'array
+				aggiornaLista();
+			}
+			
+			// Funzione per aggiornare l'output della lista
+			function aggiornaLista() {
+				let listaUl = document.getElementById("listaElementi");
+				listaUl.innerHTML = ""; // Svuota la lista esistente
+				lista.forEach(function(elemento) {
+					let li = document.createElement("li");
+					li.textContent = elemento;
+					listaUl.appendChild(li);
+				});
+				
+				// Visualizza l'array come stringa
+				document.getElementById("arrayOutput").textContent = JSON.stringify(lista);
+			}
+		</script>
+		
+	</body>
+</html>
