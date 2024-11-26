@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Rubrica Telefonica e Calendario</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<h1>Gestione Rubrica e Calendario</h1>
+		
+		<!-- Calendario -->
+		<section id="calendar">
+			<h2>Calendario</h2>
+			<div id="calendarNavigation">
+				<button id="prevMonthBtn">&lt; Mese Precedente</button>
+				<span id="monthDisplay"></span>
+				<button id="nextMonthBtn">Mese Successivo &gt;</button>
+			</div>
+			<div id="calendarDisplay"></div>
+			<div id="appointmentsForDay" style="margin-top: 20px;"></div>
+		</section>
+		
+		<!-- Modulo per aggiungere un appuntamento -->
+		<section id="addAppointmentSection">
+			<h2>Aggiungi Appuntamento</h2>
+			<form id="appointmentForm">
+				<label for="appointmentTitle">Titolo:</label>
+				<input type="text" id="appointmentTitle" required>
+				
+				<label for="appointmentDate">Data e Ora:</label>
+				<input type="datetime-local" id="appointmentDate" required>
+				
+				<button type="submit">Aggiungi Appuntamento</button>
+			</form>
+		</section>
+		
+		<script src="app.js"></script>
+	</body>
+</html>
