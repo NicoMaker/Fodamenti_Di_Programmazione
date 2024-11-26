@@ -1,32 +1,67 @@
 <!DOCTYPE html>
+<!-- Dichiara il tipo di documento come HTML5 -->
 <html lang="it">
+  <!-- Imposta la lingua del documento come Italiano -->
   <head>
     <meta charset="UTF-8" />
+    <!-- Definisce la codifica dei caratteri come UTF-8 per supportare caratteri speciali (accents, simboli, ecc.) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Imposta la viewport per un design reattivo (adatto a dispositivi mobili) -->
     <title>Lista Dinamica</title>
+    <!-- Imposta il titolo della pagina che appare nella scheda del browser -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Collega il file CSS esterno (style.css) per lo stile della pagina -->
     <script src="script.js" defer></script>
+    <!-- Collega il file JavaScript esterno (script.js) e lo esegue dopo che il contenuto è stato caricato -->
+    <link
+      rel="icon"
+      href="https://th.bing.com/th/id/R.27bb30a239aeeacf8837746726266623?rik=8eM6aBDD4MmkSQ&pid=ImgRaw&r=0"
+      type="image/x-icon"
+    />
+    <!--Aggiunta fav icon-->
   </head>
   <body>
     <div class="container">
+      <!-- Contenitore principale per il layout della pagina -->
       <h1>Gestione Lista Dinamica</h1>
+      <!-- Titolo principale della pagina -->
       <form id="inputForm">
+        <!-- Inizia un modulo con id "inputForm" -->
         <label for="name">Nome:</label>
+        <!-- Etichetta per il campo di input "Nome" -->
         <input type="text" id="name" name="name" required />
+        <!-- Campo di input per il nome, obbligatorio -->
+
         <label for="surname">Cognome:</label>
+        <!-- Etichetta per il campo di input "Cognome" -->
         <input type="text" id="surname" name="surname" required />
+        <!-- Campo di input per il cognome, obbligatorio -->
+
         <label for="email">Email:</label>
+        <!-- Etichetta per il campo di input "Email" -->
         <input type="email" id="email" name="email" required />
+        <!-- Campo di input per l'email, obbligatorio con validazione automatica dell'email -->
       </form>
+
       <div id="errorMessage" class="error" hidden>
+        <!-- Messaggio di errore inizialmente nascosto -->
         Errore: Compila tutti i campi!
+        <!-- Messaggio di errore se uno o più campi non sono compilati -->
       </div>
+
       <h2>Lista Dinamica</h2>
+      <!-- Sottotitolo che indica la sezione per la lista -->
       <ul id="dynamicList"></ul>
+      <!-- Lista non ordinata vuota che verrà popolata dinamicamente -->
+
       <div class="buttons-container">
+        <!-- Contenitore per i pulsanti -->
         <button type="submit" id="addButton" form="inputForm">Aggiungi</button>
+        <!-- Pulsante per aggiungere un elemento alla lista -->
         <button type="reset" id="clearButton" form="inputForm">Pulisci</button>
+        <!-- Pulsante per resettare i campi del modulo -->
         <button id="removeListButton">Rimuovi Lista</button>
+        <!-- Pulsante per rimuovere tutti gli elementi della lista -->
       </div>
     </div>
   </body>

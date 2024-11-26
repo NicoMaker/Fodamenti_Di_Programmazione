@@ -1,132 +1,166 @@
+/* Corpo della pagina */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: rgb(216, 216, 51);
+  font-family: Arial, sans-serif; /* Imposta il font principale della pagina */
+  margin: 0; /* Rimuove il margine predefinito del browser */
+  padding: 0; /* Rimuove il padding predefinito del browser */
+  display: flex; /* Imposta il layout come flexbox per centrare il contenuto */
+  justify-content: center; /* Centra orizzontalmente il contenuto */
+  align-items: center; /* Centra verticalmente il contenuto */
+  height: 100vh; /* Imposta l'altezza della pagina a 100% della finestra */
+  background-image: linear-gradient(
+    45deg,
+    orangered,
+    /* Rosso-arancio scuro */ #f39c12,
+    /* Arancio dorato */ orange,
+    /* Arancio */ #f9e200,
+    /* Giallo brillante */ yellow,
+    /* Giallo */ #f9e200,
+    /* Giallo brillante (ripetuto) */ orange,
+    /* Arancio */ #f39c12,
+    /* Arancio dorato (ripetuto) */ orangered
+      /* Rosso-arancio scuro (ripetuto) */
+  );
+  /* Sfondo con gradiente inclinato a 45 gradi dai toni gialli e arancioni */
 }
 
+/* Contenitore principale */
 .container {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 500px;
+  background-color: #ffffff; /* Colore di sfondo bianco */
+  border-radius: 10px; /* Rende gli angoli arrotondati */
+  padding: 20px; /* Spaziatura interna */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aggiunge una leggera ombra al contenitore */
+  width: 90%; /* Larghezza del contenitore al 90% della larghezza disponibile */
+  max-width: 500px; /* Imposta una larghezza massima di 500px */
 }
 
+/* Allineamento dei titoli */
 h1,
 h2 {
-  text-align: center;
+  text-align: center; /* Centra il testo dei titoli */
 }
 
+/* Stile del modulo */
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: flex; /* Imposta il modulo come un contenitore flexbox */
+  flex-direction: column; /* Posiziona gli elementi in colonna */
+  gap: 10px; /* Aggiunge uno spazio di 10px tra gli elementi */
 }
 
+/* Stile degli input */
 input {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 8px; /* Spaziatura interna degli input */
+  border: 1px solid #ccc; /* Bordo grigio chiaro */
+  border-radius: 5px; /* Angoli arrotondati per gli input */
 }
 
+/* Stile per i pulsanti */
 button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  width: 100%;
-  max-width: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 10px; /* Spaziatura interna dei pulsanti */
+  border: none; /* Rimuove il bordo predefinito dei pulsanti */
+  border-radius: 5px; /* Angoli arrotondati per i pulsanti */
+  cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
+  text-align: center; /* Centra il testo all'interno del pulsante */
+  width: 100%; /* Imposta la larghezza del pulsante al 100% del suo contenitore */
+  max-width: 180px; /* Impone una larghezza massima di 180px */
+  display: flex; /* Imposta il layout del pulsante come flexbox */
+  justify-content: center; /* Centra orizzontalmente il contenuto del pulsante */
+  align-items: center; /* Centra verticalmente il contenuto del pulsante */
 }
 
+/* Pulsante Aggiungi */
 button#addButton {
-  background-color: orange;
-  color: white;
+  background-color: orange; /* Colore di sfondo arancione */
+  color: white; /* Colore del testo bianco */
 }
 
+/* Pulsante Clear */
 button#clearButton {
-  background-color: darkgoldenrod;
-  color: white;
+  background-color: darkgoldenrod; /* Colore di sfondo dorato scuro */
+  color: white; /* Colore del testo bianco */
 }
 
+/* Pulsante Rimuovi Lista */
 button#removeListButton {
-  background-color: orangered;
-  color: white;
+  background-color: orangered; /* Colore di sfondo rosso aranciato */
+  color: white; /* Colore del testo bianco */
 }
 
+/* Stile del messaggio di errore */
 .error {
-  color: red;
-  text-align: center;
-  margin: 10px 0;
+  color: red; /* Colore del testo rosso */
+  text-align: center; /* Centra il testo */
+  margin: 10px 0; /* Aggiunge margini sopra e sotto */
 }
 
+/* Stile per la lista non ordinata */
 ul {
-  list-style-type: none;
-  padding: 0;
+  list-style-type: none; /* Rimuove i pallini dalla lista */
+  padding: 0; /* Rimuove il padding predefinito della lista */
 }
 
+/* Stile per ogni elemento della lista */
 li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
-  position: relative;
+  display: flex; /* Imposta il layout dell'elemento lista come flexbox */
+  justify-content: space-between; /* Distribuisce lo spazio tra gli elementi */
+  align-items: center; /* Allinea gli elementi al centro verticalmente */
+  padding: 10px; /* Spaziatura interna */
+  margin: 5px 0; /* Aggiunge margine tra gli elementi della lista */
+  border-radius: 5px; /* Angoli arrotondati per gli elementi della lista */
+  position: relative; /* Imposta la posizione relativa per eventuali elementi assoluti */
 }
 
+/* Stile per i pulsanti di modifica ed eliminazione nella lista */
 li .buttons {
-  display: flex;
-  gap: 5px;
-  margin-left: auto;
+  display: flex; /* Layout flexbox per i pulsanti */
+  gap: 5px; /* Spazio tra i pulsanti */
+  margin-left: auto; /* Allinea i pulsanti a destra */
 }
 
+/* Stile dei pulsanti in ogni elemento della lista */
 li button {
-  padding: 5px 10px;
+  padding: 5px 10px; /* Spaziatura interna dei pulsanti */
 }
 
+/* Pulsante Modifica */
 button.modify {
-  background-color: #ffc107;
-  color: white;
+  background-color: #ffc107; /* Colore di sfondo giallo */
+  color: white; /* Colore del testo bianco */
 }
 
+/* Pulsante Elimina */
 button.delete {
-  background-color: #f44336;
-  color: white;
+  background-color: #f44336; /* Colore di sfondo rosso */
+  color: white; /* Colore del testo bianco */
 }
 
+/* Stile per la lista dinamica */
 ul#dynamicList {
-  max-height: 150px;
-  overflow-y: auto;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  max-height: 150px; /* Altezza massima della lista */
+  overflow-y: auto; /* Aggiunge la barra di scorrimento verticale se la lista è lunga */
+  padding: 5px; /* Spaziatura interna */
+  border: 1px solid #ccc; /* Bordo grigio chiaro */
+  border-radius: 5px; /* Angoli arrotondati per la lista */
 }
 
-/* dopo 3 righe di lista applicata le seguenti caratterististiche */
+/* Stile per gli elementi della lista dopo ogni 3 righe */
 ul#dynamicList li:nth-child(3n) {
-  border-bottom: 1px solid black;
-  padding-bottom: 10px;
-  margin-bottom: 5px;
+  border-bottom: 1px solid black; /* Aggiunge una linea di separazione tra ogni 3 elementi */
+  padding-bottom: 10px; /* Aggiunge padding inferiore */
+  margin-bottom: 5px; /* Aggiunge margine inferiore */
 }
 
+/* Contenitore per i pulsanti (centrato) */
 .buttons-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
+  display: flex; /* Layout flexbox per i pulsanti */
+  justify-content: center; /* Centra i pulsanti orizzontalmente */
+  gap: 10px; /* Spazio tra i pulsanti */
+  margin-top: 20px; /* Aggiunge margine sopra */
 }
 
+/* Effetto hover per input e pulsanti */
 input:hover,
 button:hover {
-  transform: scale(1.05);
+  transform: scale(
+    1.05
+  ); /* Aumenta la dimensione di input e pulsanti quando l'utente ci passa sopra */
 }
