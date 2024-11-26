@@ -40,6 +40,12 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
+  width: 100%;
+  max-width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button#addButton {
@@ -49,6 +55,11 @@ button#addButton {
 
 button#clearButton {
   background-color: #f44336;
+  color: white;
+}
+
+button#removeListButton {
+  background-color: #2196f3;
   color: white;
 }
 
@@ -71,13 +82,13 @@ li {
   background-color: #f0f0f0;
   margin: 5px 0;
   border-radius: 5px;
-  position: relative; /* Per mantenere i pulsanti sempre visibili */
+  position: relative;
 }
 
 li .buttons {
   display: flex;
-  gap: 5px; /* Spazio tra i pulsanti */
-  margin-left: auto; /* Spinge i pulsanti all'estrema destra */
+  gap: 5px;
+  margin-left: auto;
 }
 
 li button {
@@ -94,36 +105,24 @@ button.delete {
   color: white;
 }
 
-
-button#removeListButton {
-  background-color: #2196f3;
-  color: white;
-  padding: 10px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 ul#dynamicList {
-  max-height: 150px; /* Altezza massima visibile */
-  overflow-y: auto; /* Barra di scorrimento verticale */
+  max-height: 150px;
+  overflow-y: auto;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-ul#dynamicList {
-  max-height: 150px; /* Altezza massima visibile */
-  overflow-y: auto; /* Barra di scorrimento verticale */
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* ogni 4 elementi applica le seguenti caratteristiche */
+/* Ogni 4 elementi applica le seguenti caratteristiche */
 ul#dynamicList li:nth-child(4n) {
-  border-top: 1px solid black; /* Linea sopra */
-  padding-top: 10px; /* Spazio tra il testo e la riga */
-  margin-top: 5px; /* Spazio aggiuntivo sopra l'elemento */
+  border-top: 1px solid black;
+  padding-top: 10px;
+  margin-top: 5px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
