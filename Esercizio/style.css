@@ -113,11 +113,11 @@ ul#dynamicList {
   border-radius: 5px;
 }
 
-/* Ogni 4 elementi applica le seguenti caratteristiche */
-ul#dynamicList li:nth-child(4n) {
-  border-top: 1px solid black;
-  padding-top: 10px;
-  margin-top: 5px;
+/* dopo 3 righe di lista applicata le seguenti caratterististiche */
+ul#dynamicList li:nth-child(3n) {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .buttons-container {
