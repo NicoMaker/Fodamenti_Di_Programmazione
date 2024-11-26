@@ -7,6 +7,13 @@ const form = document.getElementById("inputForm"),
   errorMessage = document.getElementById("errorMessage"),
   dynamicList = document.getElementById("dynamicList");
 
+// Funzione per validare l'email
+function isValidEmail(email) {
+  // RegEx per una email valida con dominio specifico
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|org|net|it)$/;
+  return emailRegex.test(email);
+}
+
 // Aggiungi elemento alla lista
 addButton.addEventListener("click", () => {
   const name = nameInput.value.trim(),
@@ -14,6 +21,14 @@ addButton.addEventListener("click", () => {
     email = emailInput.value.trim();
 
   if (!name || !surname || !email) {
+    errorMessage.textContent = "Tutti i campi sono obbligatori.";
+    errorMessage.hidden = false;
+    return;
+  }
+
+  if (!isValidEmail(email)) {
+    errorMessage.textContent =
+      "Inserisci una email valida (es. nome@dominio.com, .org, .net, .it).";
     errorMessage.hidden = false;
     return;
   }
@@ -56,5 +71,5 @@ const removeListButton = document.getElementById("removeListButton");
 
 // Rimuovi tutti gli elementi dalla lista
 removeListButton.addEventListener("click", () => {
-  dynamicList.innerHTML = ""; // Cancella tutto il contenuto della lista
+  dynamicList.innerHTML = ""; // Cancella tutto il contenuto della lista
 });
