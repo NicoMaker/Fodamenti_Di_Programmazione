@@ -41,15 +41,15 @@ enza;
 function aggiornaMessaggioSopravvivenza(sommaio, sommagruppo) {
   let messaggio = "";
 
-  if (sommaio > 39)
-    messaggio += `Da solo non sei sopravvissuto avendo il punteggio di ${sommaio}`;
-  else
-    messaggio += `Da solo sei sopravvissuto avendo il punteggio di ${sommaio}`;
+  messaggio +=
+    sommaio > 39
+      ? `Da solo non sei sopravvissuto avendo il punteggio di ${sommaio}`
+      : `Da solo sei sopravvissuto avendo il punteggio di ${sommaio}`;
 
-  if (sommagruppo > 39)
-    messaggio += `<br />In gruppo non sei sopravvissuto avendo il punteggio di ${sommagruppo}`;
-  else
-    messaggio += `<br />In gruppo sei sopravvissuto avendo il punteggio di ${sommagruppo}`;
+  messaggio +=
+    sommagruppo > 39
+      ? `<br />In gruppo non sei sopravvissuto avendo il punteggio di ${sommagruppo}`
+      : `<br />In gruppo sei sopra`;
 
   stampa.innerHTML = messaggio;
 }
