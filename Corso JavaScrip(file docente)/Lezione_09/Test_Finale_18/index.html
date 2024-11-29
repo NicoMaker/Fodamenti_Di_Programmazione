@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Riepilogo Situazione Cliente</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div id="master">
+			<h1>Riepilogo Situazione Cliente</h1>
+			<div id="dati-container">
+				<form id="cliente-form">
+					<div class="form-group">
+						<label for="nome">Nome:</label>
+						<input type="text" id="nome" maxlength="24" placeholder="Inserisci il nome">
+						<span class="error" id="error-nome"></span>
+					</div>
+					<div class="form-group">
+						<label for="cognome">Cognome:</label>
+						<input type="text" id="cognome" maxlength="24" placeholder="Inserisci il cognome">
+						<span class="error" id="error-cognome"></span>
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input type="email" id="email" maxlength="40" placeholder="Inserisci l'email">
+						<span class="error" id="error-email"></span>
+					</div>
+					<div class="form-group">
+						<label for="saldo">Saldo (€):</label>
+						<input type="number" id="saldo" max="50000" step="0.01" placeholder="Inserisci il saldo">
+						<span class="error" id="error-saldo"></span>
+					</div>
+					<div class="form-group">
+						<label for="data">Data Acquisizione:</label>
+						<input type="date" id="data">
+						<span class="error" id="error-data"></span>
+					</div>
+					<div class="buttons">
+						<div class="left">
+							<button type="button" class="add" id="add-btn">Aggiungi</button>
+							<button type="reset" class="cancel">Annulla</button>
+						</div>
+						<div class="right">
+							<button type="button" class="clear" id="clear-btn">Pulisci Archivio</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div id="lista-container"></div>
+		</div>
+		
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+#master {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#dati-container {
+    width: 50%;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 30%;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 40%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-group .error {
+    color: red;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons .left,
+.buttons .right {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button.add {
+    background-color: #007bff;
+    color: white;
+}
+
+button.cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
+button.clear {
+    background-color: #dc3545;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#lista-container {
+    margin: 0 auto 20px auto;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.cliente-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cliente-row:last-child {
+    border-bottom: none;
+}
+
+.cliente-row span {
+    font-size: 16px;
+}
+
+.cliente-row .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.cliente-row button {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.cliente-row button.delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.cliente-row button.edit {
+    background-color: #ffc107;
+    color: black;
+}
